@@ -48,8 +48,9 @@ configured.
 
 ## Tracking received values
 
-Every received packet publishes the value again, but `on_state` only runs when the value changes. To act on every
-received value, for example to record when the remote sensor was last heard from, use
+Each received update for this sensor publishes its value again, but `on_state` only runs when the value changes.
+Packets that carry only other sensors do not update it. To act on every received update, for example to record when
+the remote sensor was last heard from, use
 [`on_raw_value`](/components/binary_sensor#binary_sensor-on_raw_value).
 
 ## See Also
